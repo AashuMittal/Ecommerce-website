@@ -11,8 +11,8 @@ app.get('/',(req,res)=>{
     res.send("app is working")
 })
 
-app.post('/register',UserController.Register)
-app.post('/login',UserController.Login);
-app.post('/payment',UserController.AddPayemnt);
+app.post('/api/register',UserController.Register)
+app.post('/api/login',UserController.Login);
+app.post('/api/payment',UserController.AddPayemnt);
 
 module.exports = app; 

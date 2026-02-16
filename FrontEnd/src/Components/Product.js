@@ -12,7 +12,7 @@ const Product = () => {
     const navigate = useNavigate();
 
     const fetchApi = async () => {
-        const res = await fetch('https://fakestoreapi.com/products');
+        const res = await fetch('https://fakestoreapi.com/api/products');
         const result = await res.json();
         setData(result);
     };
