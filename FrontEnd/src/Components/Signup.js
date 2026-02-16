@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -35,9 +35,10 @@ const Signup = () => {
         },
         body: JSON.stringify(userData),
       });
-localStorage.setItem("token",result.token);
-      const result = await response.json();
+       const result = await response.json();
 
+localStorage.setItem("token",result.token);
+     
       if (response.ok) {
         toast.success("🦄 Signup Successful!");
 

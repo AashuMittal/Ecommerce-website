@@ -1,5 +1,5 @@
 import 'animate.css';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import photo from './photo1.jpg';
@@ -21,7 +21,7 @@ const HomePage = () => {
     }, 500);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [words]);
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-slate-900 to-slate-300 text-white flex flex-col justify-between">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Change Navigate to useNavigate
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,7 +9,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate(); // Use useNavigate instead of Navigate
 
-  const fetchApi = async () => {
+
+  useEffect(() => {
+     const fetchApi = async () => {
     try {
       const res = await fetch("http://localhost:5000/api/login");
       if (!res.ok) {
@@ -21,6 +23,11 @@ const Login = () => {
       console.error("Error fetching data:", error);
     }
   };
+  fetchApi();
+  }, [])
+  
+
+  console.log(data);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
