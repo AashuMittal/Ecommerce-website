@@ -11,8 +11,12 @@ app.get('/',(req,res)=>{
     res.send("app is working")
 })
 
-app.post('/api/register',UserController.Register)
-app.post('/api/login',UserController.Login);
-app.post('/api/payment',UserController.AddPayemnt);
+app.post('/register',UserController.Register)
+app.post('/login',UserController.Login);
+app.post('/payment',UserController.AddPayemnt);
+
+app.listen(5000,()=>{
+    console.log("running")
+})
 
 module.exports = app; 

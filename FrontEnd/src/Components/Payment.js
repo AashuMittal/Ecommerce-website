@@ -33,7 +33,7 @@ const Payment = () => {
         console.log("User Data:", userData); // Debugging line
     
         try {
-            const response = await fetch("http://localhost:5000/api/payment", {
+            const response = await fetch("http://localhost:5000/payment", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
