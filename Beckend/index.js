@@ -18,5 +18,3 @@ app.post('/payment',UserController.AddPayemnt);
 app.listen(5000,()=>{
     console.log("running")
 })
-
-module.exports = app; 
